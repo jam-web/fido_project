@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
+        <a class="navbar-brand" style="font-size: 35px; font-weight: 600; color:#ff5c0b;" href="/"><img src="{% static 'images/Fido_logo.png' %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 600;" href="/teacher_new_message">Send New Message</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">    
+                <li class="nav-item active">
+                    <a class="nav-link btn btn-lg active" style="background-color: #ff5c0b; font-size: 25px; font-weight: 600; color: #fff;" href="/logout">Logout</a>
+                </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <h1 id="t_mailbox_h1">Welcome to your mailbox {{ teacher.first_name }} {{ teacher.last_name }},</h1>
+        <a id="t_sent_button" class="btn btn-lg"  style="background-color: #ff5c0b; font-weight: 600; color: #fff;" href="/teacher_sent">Sent Messages</a>
+        <table id="t_mailbox" class="table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>From:</th>
+                    <th>Subject:</th>
+                    <th>Message:</th>
+                    <th>Date:</th>
+                    <th>Action:</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for msg in teacher.teacher_message.all  %}
+                {% if msg.sender == "student" %}
+                <tr>
+                    <td>{{msg.student.first_name }} {{ msg.student.last_name }}</td>
+                    <td>{{ msg.subject }}</td>
+                    <td>{{ msg.message_content }}</td>
+                    <td>{{ msg.created_at }}</td>
+                    <td><a href="/teacher_delete/{{ msg.id }}">Delete</a> 
+                        <a href="/teacher_new_message">Reply</a>
+                    </td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>    
+</body>
+</html>

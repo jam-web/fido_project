@@ -1,0 +1,35 @@
+from django.urls import path
+from .import views
+
+urlpatterns = [
+    path('', views.index),
+    # path('formplay', views.formplay),
+    # path('add', views.add_student),
+    # path('success', views.success),
+    path('login', views.login),
+    path('problem_solve', views.problem_solve),
+    path('who_we_are', views.who_we_are),
+    path('our_method', views.our_method),
+    path('testimonials', views.testimonials),
+    path('contact_us', views.contact_us),
+    path('student_register', views.student_register),
+    path('new_student', views.new_student),
+    path('student_login', views.student_login),
+    path('student_dashboard', views.student_dashboard),
+    path('teacher_register', views.teacher_register),
+    path('new_teacher', views.new_teacher),
+    path('teacher_login', views.teacher_login),
+    path('teacher_dashboard', views.teacher_dashboard),
+    path('logout', views.logout),
+    path('teacher_new_message', views.teacher_new_message),
+    path('teacher_add_message', views.teacher_add_message),
+    path('student_new_message', views.student_new_message),
+    path('student_add_message', views.student_add_message),
+    path('student_delete/<int:msg_id>', views.student_delete),
+    path('teacher_delete/<int:msg_id>', views.teacher_delete),
+    path('student_mailbox', views.student_mailbox),
+    path('teacher_mailbox', views.teacher_mailbox),
+    path('student_sent', views.student_sent),
+    path('teacher_sent', views.teacher_sent),
+]
+

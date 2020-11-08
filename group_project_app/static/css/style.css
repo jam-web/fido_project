@@ -1,0 +1,166 @@
+#fido {
+    width: 1600px;
+    display: block;
+    margin: 0 auto;
+}
+.below_buttons {
+    width: 1200px;
+    height: 80px;
+    background-color: white;
+}
+.button {
+    width: 200px;
+    margin: 0 auto;
+}
+.below_buttons {
+    height: 80px;
+    width: 1200px;
+    background-color: white;
+}
+.youtube {
+    margin-left: 300px;
+}
+.headertop {
+    background-color: white;
+    width: 1000px;
+    height: 50px;
+}
+#header_fido {
+    width: 1000px;
+    display: block;
+    margin: 0 auto;
+}
+.solve {
+    display: inline-block;a
+}
+.try {
+    display: inline-block;
+} 
+.carousel {
+    width: 1000px;
+    margin: 0 auto;
+}
+.footer {
+    width: 1000px;
+    height: 50px;
+    background-color: lightgrey;
+    margin: 0 auto;
+}
+.copyright {
+    padding-top: 10px;
+    text-align: center;
+}
+.new_teacher_header {
+    background-color: #ff5c0b;
+    padding-left: 55px;
+}
+.new_student_header {
+    background-color: #ff5c0b;
+    padding-left: 55px;
+}
+#student_mbox_back {
+    margin-right: 15px;
+}
+#student_send_message_back {
+    margin-right: 15px;
+}
+#student_sent_back {
+    margin-right: 15px;
+}
+#teacher_new_msg_back {
+    margin-right: 15px;
+}
+#teacher_sent_back {
+    margin-right: 15px;
+}
+.contact_us1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+}
+.contact_us4 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 160px;
+    padding-top: 20px;
+}
+.contact_box {
+    margin: 0 auto;
+    width: 1000px;
+    padding: 0 110px;
+}
+#new_student_index {
+    margin-right: 60px;
+}
+#new_teacher_index {
+    margin-right: 60px;
+}
+#login_index {
+    margin-right: 60px;
+}
+#index_bottom_nav1 {
+    color: #ff5c0b;
+    font-weight: 500;
+    font-size: larger;
+}
+#index_bottom_nav2 {
+    color: #ff5c0b;
+    font-weight: 500;
+    font-size: larger;
+}
+#index_bottom_nav3 {
+    color: #ff5c0b;
+    font-weight: 500;
+    font-size: larger;
+}
+#index_bottom_nav4 {
+    color: #ff5c0b;
+    font-weight: 500;
+    font-size: larger;
+}
+#s_sent_button {
+    margin-bottom: 25px;
+}
+#t_sent_button {
+    margin-bottom: 25px;
+}
+#background_image {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#s_problem_button {
+    margin-right: 15px;
+}
+#s_inbox_problem {
+    margin-right: 625px;
+}
+#math_problem {
+    margin-left: 500px;
+    margin-top: 25px;
+    color: #fff;
+}
+#quotient_label{
+    margin-left: 450px;
+    color: #fff;
+}
+#quotient_input {
+    width: 100px;
+}
+#remainder_input {
+    width: 100px;
+}
+#remainder_label {
+    margin-left: 435px;
+    color: #fff;
+}
+#solution_btn {
+    margin-left: 500px;
+    margin-top: 20px;
+}
+.screens {
+    margin-top: 25px;
+}
+#video2 {
+    margin-left: 10px;
+}
+#video3 {
+    margin-left: 10x;
+}
